@@ -60,3 +60,15 @@ th, td {
   padding-bottom: 24px;
   /* Esto garantiza que el espacio del footer no se superponga con el contenido */
 }
+
+    /* Aplicar sombreado al texto en <h5> y <p> del carrusel*/
+    .carousel-caption h5,
+    .carousel-caption p {
+      text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5); /* Ajusta estos valores según tus preferencias del carrusel*/
+    }
+    
+    /* Controlar la altura de las imágenes del carrusel*/
+    .carousel-item img {
+      height: 200px; /* Ajusta la altura deseada del carrusel*/
+      object-fit: cover;
+    }

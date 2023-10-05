@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos</title>
+    <title>Posadas para recorrer</title>
      
 
       <!-- Modos claro y oscuro -->
@@ -13,9 +13,12 @@
         <link rel="stylesheet" href="./resources/boostrap/bootstrap/dist/css/bootstrap.css">   
    <!-- Font-awesome  -->           
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
- 
-<link rel="stylesheet" href="./resources/reset.css">
-     
+
+        <link rel="stylesheet" href="./resources/reset.css">
+        <link rel="stylesheet" href="./resources/animaciones/animate.css">
+
+<!-- Icono de la pestaña tambien si se modifica ver en <a class="navbar-brand" href="#"><img src=... -->         
+    <link rel="shortcut icon" type="image/x-icon" href="./imagenes/costa-pos-rio - ICON.jpg">       
     <!-- SEO Meta Tags -->
     <meta name="keywords" content="php, curso, codoacodo, codo a codo">
     <!-- Autor Meta Tags -->        
@@ -28,14 +31,20 @@
 </head>
 <body>
     <!--Barra de navegación-->
-    <header class="navbar-fixed-top">
+    <header class="navbar-fixed-top class="container-fluid">
     <nav class="navbar navbar-expand-lg w-100 fixed-top">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Mi Aplicación</a>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <!--Icono de la barrra de navgación-->
+        <div class="container-fluid d-flex align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img class="logo animate__animated animate__flip animate__slow " src="./imagenes/costa-pos-rio - ICON.jpg" alt="" width="50" height="44">
+    <!--Nombre de la barrra de navegación-->                
+                <span class="titulo ml-2">Posadas para recorrer</span>
+            </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
@@ -44,7 +53,7 @@
                     <a class="nav-link" href="#">Acerca de</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="index.html#formulario" onclick="changeTextColor(this)">Contacto</a>
                 </li>
             </ul>
             <button class="btn btn-dark" id="modo-dark">
@@ -60,11 +69,93 @@
 </header> 
 
 <!--Contenido Principal -->   
-<section style="margin-top: 50px;" >  
+<section style="margin-top: 60px;" >  
 <div class="content">
-    <h1>Bienvenido a Mi Aplicación</h1>
-    <p>Contenido de la aplicación aquí.</p>
+    <h1 class="text-center">Bienvenidos</h1>
+
+    <!--Carrusel-->  
+<div class="mt-5 h-100">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicadores -->
+      <ol class="carousel-indicators">
+        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+      </ol>
+  
+      <!-- Slides del carrusel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./imagenes/brete-playa-puesta de sol.jpg" alt="Playa El Brete puesta de sol"  class="d-block w-100 h-auto">
+          <div class="carousel-caption">
+            <h5 class="shadow p-3 mb-5 rounded">Playa El Brete puesta de sol</h5>
+            <p class="shadow p-3 mb-5 rounded">Durante la temporada de verano se presentan diferentes opciones de actividades físicas y recreativas, como vóley en la playa, actividades físicas funcionales, zumba, fútbol, y fútbol de playa. Para aquellos que prefieren los deportes acuáticos es posible practicar natación, canotaje y aquagym. Además de ser el centro para actividades recreativas como shows, ferias y festivales. Acercate para disfrutar al aire libre, realizar actividades recreativas y conocer los distintos paradores, bares y restaurantes que brinda la zona gastronómica. </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./imagenes/estacion-4to-tramo.jpg" alt="Imagen 2" class="d-block w-100 h-auto">
+          <div class="carousel-caption">
+            <h5 class="shadow p-3 mb-5 rounded">Estación de tren - 4to tramo de la costanera</h5>
+            <p class="shadow p-3 mb-5 rounded">El edificio es una réplica exacta de la estación de trenes original de la ciudad de Posadas, terminal del servicio Federico Lacroze - Posadas llamado el Gran Capitán que fue inaugurada en 1913 y funcionó hasta el año 2011. Fue declarada Patrimonio Cultural de la ciudad, y donde se suelen realizan exposiciones artísticas y culturales.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./imagenes/costa-arboles-frondoso.jpg" alt="Imagen 3" class="d-block w-100 h-auto">
+          <div class="carousel-caption">
+            <h5 class="shadow p-3 mb-5 rounded">Para disfrutar de la costa con un buen mate</h5>
+            <p></p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Controles del carrusel -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </a>
+    </div>
+  </div>
 </div>
+
+<!--Formulario -->            
+<section id="formulario" class="content formulario py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2 class="mb-4"><span class="smaller-text">Modo de contacto</span> 
+                                <form action="" method="post">
+                    <div class="row g-3 mt-4">
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" name="Nombre" id="Nombre" placeholder="Nombre">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" name="Apellido" id="Apellido" placeholder="Apellido">
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-4">
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="Mensaje" id="Comentario" placeholder="Mensaje">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <p class="text-start mb-0 text-muted">Recuerda incluir datos de contacto como numero de celular o cualquier otro medio que considere conveniente</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="d-grid gap-2 col-md-12 text-center">
+                            <input class="btn btn-success btn-lg btn-block" type="button" value="Enviar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 </section>
 
 <!--Pie de página -->   
@@ -74,16 +165,20 @@
             <ul class="list-inline justify-content-center mb-0">
                 <li class="mx-3 d-inline">Preguntas Frecuentes</li>
                 <li class="mx-3 d-inline">Contáctanos</li>
-                <li class="mx-3 d-inline">Prensa</li>
-                <li class="mx-3 d-inline">Conferencias</li>
-                <li class="mx-3 d-inline">Privacidad</li>
-                <li class="mx-3 d-inline">Estudiantes</li>
             </ul>
         </nav>
         <p class="text-center">&copy; 2023 Victor Alberto Nibeyro</p>
     </div>
 </footer>
-
+<script>
+        function changeTextColor(element) {
+        var links = document.querySelectorAll('.nav-link');
+        links.forEach(function (link) {
+            link.classList.remove('active1');
+        });
+        element.classList.add('active1');
+    }
+</script>
 <!-- JavaScript para bootstrap 5.3 -->
 <script src="./resources/boostrap/bootstrap/dist/js/bootstrap.js"></script>
 <script src="./resources/js/modoclaro-oscuro.js"></script>
