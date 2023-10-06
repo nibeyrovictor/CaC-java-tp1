@@ -72,3 +72,8 @@ th, td {
       height: 200px; /* Ajusta la altura deseada del carrusel*/
       object-fit: cover;
     }
+
+    .custom-toggler {
+    order: 2; /* Cambia el orden del botón de alternancia para que esté al final */
+    margin-left: auto; /* Mueve el botón de alternancia al lado derecho */
+}
