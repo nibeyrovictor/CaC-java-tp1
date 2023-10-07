@@ -168,7 +168,9 @@
             <div class="row mt-4">
               <div class="d-grid gap-2 col-md-12 text-center">
                 <input class="btn btn-success btn-lg btn-block" type="button" value="Enviar">
+                <input class="btn btn-danger btn-lg btn-block" id="limpiarFormulario" type="button" value="Limpiar">
               </div>
+              
             </div>
           </form>
         </div>
@@ -254,6 +256,22 @@
     // Llama a la función initMap una vez que se cargue la página
     google.maps.event.addDomListener(window, 'load', initMap);
 </script>
+
+<script>
+  // Función para limpiar los campos del formulario
+  function limpiarFormulario() {
+    document.getElementById('Nombre').value = '';
+    document.getElementById('Apellido').value = '';
+    document.getElementById('Comentario').value = '';
+    document.getElementById('mail').value = '';
+  }
+
+  // Asocia la función de limpiar al botón "Limpiar"
+  document.getElementById('limpiarFormulario').addEventListener('click', function() {
+    limpiarFormulario();
+  });
+</script>
+
 
 </body>
 </html>
